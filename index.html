@@ -2,25 +2,38 @@
     <head>
         <title>Form</title>
         <style>
-            form {
+            form, .errDisplay {
                 margin: auto;
                 width: 400px;
                 border: 1px solid black;
                 border-radius: 5px;
                 padding: 20px;
             }
+
             input {
                 padding: 3px;
                 background-color: rgb(197, 195, 195);
             }
+
+            .errDisplay {
+                margin-bottom: 20px;
+                text-align: center;
+                background-color: rgb(249, 82, 82);
+                font-size: larger;
+                border: none !important;
+                display: none;
+            }
         </style>
     </head>
     <body>
-        <form id="formId">
+        
+        <div class="errDisplay"></div>
+
+        <form id="formId" action="#">
             <label>Name : </label>
             <input type="text" id="name">
             <br><br>
-            
+
             <label>Username : </label>
             <input type="text" id="username">
             <br><br>

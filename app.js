@@ -2,6 +2,7 @@ var usernameField = document.getElementById('username');
 var emailField = document.getElementById('email');
 var passwordField = document.getElementById('password');
 var retypeField = document.getElementById('re_password');
+var errDisplay = document.getElementsByClassName('errDisplay')[0];
 var pwdErr = document.getElementById('pwdErr');
 
 function validatePassword(){
@@ -11,16 +12,19 @@ function validatePassword(){
     } else {
         passwordField.style.backgroundColor = "lightGreen";
         pwdErr.innerHTML = "";
-
     }
 }
 
 function submitForm(){
     if (usernameField.value == "" || emailField.value == "" || passwordField.value == "" ) {
-        console.log('Required Field empty');
+        errDisplay.style.display = "block";
+        errDisplay.innerHTML = 'Required Field empty';
     } else if (passwordField.value != retypeField.value){
-        console.log("Password did not match");
+        errDisplay.style.display = "block";
+        errDisplay.innerHTML = "Password did not match";
     } else {
-        console.log("Form submitted");
+        console.log("submitting form...");
+        errDisplay.style.display = "none";
+
     }
 }
