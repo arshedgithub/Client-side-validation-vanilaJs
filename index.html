@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            form {
+                margin: auto;
+                width: 400px;
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 20px;
+            }
+            input {
+                padding: 3px;
+                background-color: rgb(197, 195, 195);
+            }
+        </style>
+    </head>
+    <body>
+        <form id="formId">
+            <label>Name : </label>
+            <input type="text" id="name">
+            <br><br>
+            
+            <label>Username : </label>
+            <input type="text" id="username">
+            <br><br>
+
+            <label>Email : </label>
+            <input type="email" id="email">
+            <br><br>
+            
+            <label>Password : </label>
+            <input type="password" id="password" onkeyup="validatePassword()">
+            <p id="pwdErr" style="color: red;"></p>
+
+            <label>Re-Password : </label>
+            <input type="password" id="re_password" placeholder="Re-type password">
+            <br><br>
+
+            <button onclick="submitForm()">Register</button>
+            <button>reset</button>
+        </form>
+        <script src="app.js"></script>
+    </body>
+</html>
