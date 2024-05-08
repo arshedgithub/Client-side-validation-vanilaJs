@@ -16,18 +16,32 @@
             }
 
             .errDisplay {
+                position: relative;
                 margin-bottom: 20px;
                 text-align: center;
                 background-color: rgb(249, 82, 82);
                 font-size: larger;
                 border: none !important;
                 display: none;
+            } 
+            #errCloseBtn {
+                position: absolute;
+                top: 3px;
+                right: 5px;
+                padding: 0 7px 3px 7px;
+                background-color: black;
+                color: white;
+                border-radius: 50%;
+            }
+            #errCloseBtn:hover {
+                background-color: white;
+                color: black;
             }
         </style>
     </head>
     <body>
         
-        <div class="errDisplay"></div>
+        <div class="errDisplay"><span id="errMessage"></span><span id="errCloseBtn">x</span></div>
 
         <form id="formId" action="#">
             <label>Name : </label>

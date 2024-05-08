@@ -4,6 +4,7 @@ var passwordField = document.getElementById('password');
 var retypeField = document.getElementById('re_password');
 var errDisplay = document.getElementsByClassName('errDisplay')[0];
 var pwdErr = document.getElementById('pwdErr');
+var errMessage = document.getElementById('errMessage');
 
 function validatePassword(){
     if(passwordField.value.length < 8){
@@ -18,10 +19,10 @@ function validatePassword(){
 function submitForm(){
     if (usernameField.value == "" || emailField.value == "" || passwordField.value == "" ) {
         errDisplay.style.display = "block";
-        errDisplay.innerHTML = 'Required Field empty';
+        errMessage.innerHTML = 'Required Field empty';
     } else if (passwordField.value != retypeField.value){
         errDisplay.style.display = "block";
-        errDisplay.innerHTML = "Password did not match";
+        errMessage.innerHTML = "Password did not match";
     } else {
         console.log("submitting form...");
         errDisplay.style.display = "none";
