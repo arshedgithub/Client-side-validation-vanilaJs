@@ -5,6 +5,9 @@ var retypeField = document.getElementById('re_password');
 var errDisplay = document.getElementsByClassName('errDisplay')[0];
 var pwdErr = document.getElementById('pwdErr');
 var errMessage = document.getElementById('errMessage');
+var errCloseBtn = document.getElementById('errCloseBtn');
+
+errCloseBtn.addEventListener('click', closeErrorMessage);
 
 function validatePassword(){
     if(passwordField.value.length < 8){
@@ -25,7 +28,10 @@ function submitForm(){
         errMessage.innerHTML = "Password did not match";
     } else {
         console.log("submitting form...");
-        errDisplay.style.display = "none";
-
+        closeErrorMessage();
     }
+}
+
+function closeErrorMessage(){
+    errDisplay.style.display = "none";
 }
