@@ -1,0 +1,37 @@
+form, .errDisplay {
+    margin: auto;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+input {
+    padding: 3px;
+    background-color: rgb(197, 195, 195);
+}
+
+.errDisplay {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(249, 82, 82);
+    font-size: larger;
+    border: none !important;
+    display: none;
+} 
+
+#errCloseBtn {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 0 7px 3px 7px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+}
+
+#errCloseBtn:hover {
+    background-color: white;
+    color: black;
+}
